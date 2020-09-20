@@ -1,0 +1,6 @@
+Denon setup:
+deno install --allow-read --allow-env --allow-run --allow-write --allow-plugin --allow-net -f -q --unstable https://deno.land/x/denon@2.4.0/denon.ts
+
+denon start C:\dev\behold\host\examples\png-test.png
+
+denon start ./examples/png-test.png

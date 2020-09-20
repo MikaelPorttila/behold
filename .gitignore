@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Deno
-dist/
+host/dist/

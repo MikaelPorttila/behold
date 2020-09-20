@@ -1,0 +1,24 @@
+{
+  "name": "behold-frontend",
+  "version": "1.0.0",
+  "description": "Behold frontend",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "parcel ./src/index.html --https",
+    "build": "parcel build ./src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Behold",
+    "Image",
+    "Viewer"
+  ],
+  "author": "Mikael Porttila",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "parcel-plugin-inline-source": "^1.0.0",
+    "sass": "^1.26.11",
+    "typescript": "^4.0.3"
+  }
+}

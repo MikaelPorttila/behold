@@ -1,12 +1,13 @@
 import { WebView } from "WebView";
-import { loadFile } from './lib/file/file-loader.ts'
-import { composeViewport } from './client/mod.ts';
+import { loadFile } from './lib/file/file_loader.ts'
+import { getTemplate } from "./client/client.ts";
+import { InjectionData } from './client/types/injection_data.ts';
 
 if (Deno.args.length) {
   const currentFile = await loadFile(Deno.args[0]);
-  const base64Img = `data:${currentFile.mime};base64, ${currentFile.base64File.data}`;
-  const html = composeViewport(base64Img);
-
+  const data = new InjectionData(currentFile);
+  const html = getTemplate(data);
+  
   await new WebView({
     title: currentFile.title,
     url: `data:text/html,${encodeURIComponent(html)}`,

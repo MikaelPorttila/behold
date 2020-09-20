@@ -8,6 +8,13 @@ scripts:
             - env
             - read
             - plugin
+    wire:
+        cmd: "deno run ./wire.ts"
+        watch: false
+        desc: "Inject compiled client frontend into the host"
+        allow:
+            - read
+            - write
     bundle:
         cmd: "deno bundle --importmap=import_map.json ./src/main.ts ./dist/behold.ts --config ./tsconfig.json"
         desc: "Bundle application"
