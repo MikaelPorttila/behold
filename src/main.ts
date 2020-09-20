@@ -1,4 +1,4 @@
-import { WebView } from "../deps.ts";
+import { WebView } from "WebView";
 import { Base64 } from './lib/encoding/base64.ts';
 let base64Img = '';
 

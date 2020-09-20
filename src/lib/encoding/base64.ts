@@ -1,4 +1,4 @@
-import { mimeLookup } from "../../../deps.ts";
+import { lookup } from "MimeTypes";
 
 export class Base64 {
     constructor(
@@ -9,7 +9,7 @@ export class Base64 {
     static async fromFile(path: string): Promise<Base64> {      
         const split = path.split('.');
         const fileExtension = split[split.length - 1];
-        const mime = mimeLookup(fileExtension);
+        const mime = lookup(fileExtension);
         const bytes = await Deno.readFile(Deno.args[0]);
 
         return this.fromBytes(bytes, mime as string);

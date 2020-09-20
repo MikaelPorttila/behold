@@ -1,6 +1,6 @@
 scripts:
     start:
-        cmd: "deno run ./src/main.ts"
+        cmd: "deno run --importmap=import_map.json ./src/main.ts"
         desc: "Debug application"
         unstable: true
         watch: false
@@ -8,8 +8,18 @@ scripts:
             - env
             - read
             - plugin
-    build:
-        cmd: "deno run -A scripts/build.ts"
-        desc: "Build application"
+    bundle:
+        cmd: "deno bundle ./src/main.ts ./dist/behold.ts --config ./tsconfig.json"
+        desc: "Bundle application"
         unstable: true
         watch: false
+    dist:
+        cmd: "deno run ./dist/behold.ts"
+        desc: "Run bundled application"
+        unstable: true
+        watch: false
+        allow:
+            - env
+            - read
+            - plugin
+        

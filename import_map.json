@@ -1,0 +1,6 @@
+{
+    "imports": {
+       "WebView": "https://deno.land/x/webview/mod.ts",
+       "MimeTypes": "https://deno.land/x/media_types/mod.ts"
+    }
+ }
