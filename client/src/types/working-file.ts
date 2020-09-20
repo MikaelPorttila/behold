@@ -1,4 +1,4 @@
-import { Base64 } from "./Base64";
+import { Base64 } from "./base64";
 
 export class WorkingFile {
     constructor(
