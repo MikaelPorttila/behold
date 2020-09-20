@@ -9,7 +9,7 @@ scripts:
             - read
             - plugin
     bundle:
-        cmd: "deno bundle ./src/main.ts ./dist/behold.ts --config ./tsconfig.json"
+        cmd: "deno bundle --importmap=import_map.json ./src/main.ts ./dist/behold.ts --config ./tsconfig.json"
         desc: "Bundle application"
         unstable: true
         watch: false
